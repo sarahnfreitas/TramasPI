@@ -1,5 +1,5 @@
 // 1. Resolve o FOUC, revelando a caixa do mapa suavemente
-gsap.set("#main-svg", { autoAlpha: 1 });
+gsap.set("#main-svg", { autoAlpha: 1, xPercent: 0, z: 0.1 });
 
 // 2. AQUECIMENTO DA GPU MÁXIMO: 
 // Força o cálculo geométrico prévio (xPercent: 0) 
@@ -8,6 +8,8 @@ gsap.set("#main-svg", {
   xPercent: 0, 
   z: 0.1 
 });
+
+gsap.set("#texto-lateral", { x: 50 }); // Posiciona o texto lateral fora da tela para a direita
 
 const tl = gsap.timeline();
 
@@ -35,5 +37,14 @@ tl.to("#logo", {
   onComplete: () => {
     document.body.style.overflow = "auto";
   }
-}, "+=0.5");
+}, "+=0.5")
 
+.to("#texto-lateral", {
+  autoAlpha: 1,  
+  x: 0,          
+  duration: 1.5,
+  ease: "power2.out",
+  onComplete: () => {
+    document.body.style.overflow = "auto";
+  }
+});
