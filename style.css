@@ -1,0 +1,93 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Evita rolagem durante a intro */
+}
+
+#intro-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #EA972D; /* Cor inicial */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+/*#logo {
+  /* otimiza a animação extrema de zoom
+  will-change: transform, opacity;
+} */ /* esquece esse caraio */
+
+#main-content {
+   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('background texture/tramas fundo website1.png') center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+#main-svg {  
+  /* O mapa vai ocupar sempre 35% da largura total da tela */
+  width: 35vw; 
+  
+  /* limites de segurança */
+  min-width: 280px; 
+  max-width: 600px; 
+  
+  height: auto; /* não esticar*/
+  flex-shrink: 0;
+
+  will-change: transform; /* otimiza para transformações */
+
+  visibility: hidden;
+}
+
+#texto-lateral {
+  position: absolute; /* Posicionamento absoluto para não atrapalhar o centro do mapa */
+  right: 10vw;        /* Distância da borda direita da tela */
+  width: 30vw;        /* Largura do texto responsiva */
+  max-width: 400px;
+  color: #ffffff;     /* Cor do texto (ajuste conforme o seu fundo) */
+  font-family: sans-serif;
+  font-family: "snaga-unicase-display", sans-serif;
+  font-style: normal;
+  font-weight: 100; 
+
+  color: #F3E28B;
+  
+  visibility: hidden; /* mantém o texto invisível até o GSAP assumir o controle */
+}
+
+#mapa-completo {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+
+
+}
+
+/* efeito de destaque tramalogo */
+#peca-1:hover, #peca-2:hover, #peca-3:hover, #peca-4:hover {
+  fill: #ff5733; /* muda a cor de preenchimento para a cor de destaque */
+  cursor: pointer; /* transforma o mouse em uma "mãozinha" de clique */
+  transition: fill 0.3s ease; /* faz a cor mudar de forma suave */
+}
+
+.peca-mapa {
+  fill: #F7E4D0; 
+  transition: fill 0.3s ease;
+  cursor: pointer;
+}
+
+.peca-mapa:hover {
+  fill: #ff5733; /* <-- COLOQUE AQUI a cor de destaque! */
+  transition: fill 0.3s ease;
+}
