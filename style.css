@@ -61,15 +61,14 @@ body, html {
 #texto-lateral {
   position: absolute; /* Posicionamento absoluto para não atrapalhar o centro do mapa */
   right: 10vw;        /* Distância da borda direita da tela */
+  font-size: 40px;       /* Tamanho do texto */
   width: 30vw;        /* Largura do texto responsiva */
-  max-width: 400px;
-  color: #ffffff;     /* Cor do texto (ajuste conforme o seu fundo) */
+  max-width: 500px;
+  color: #F3E28B;     /* Cor do texto (ajuste conforme o seu fundo) */
   font-family: sans-serif;
   font-family: "snaga-unicase-display", sans-serif;
   font-style: normal;
   font-weight: 100; 
-
-  color: #F3E28B;
   
   visibility: hidden; /* mantém o texto invisível até o GSAP assumir o controle */
 }

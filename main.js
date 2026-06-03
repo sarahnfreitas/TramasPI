@@ -8,7 +8,7 @@ gsap.set("#texto-lateral", { x: 50 }); // Posiciona o texto lateral fora da tela
 gsap.set("#modal-parabens-container", { autoAlpha: 0 }); // NÃO TIRA ESTE CARALHO AQUI
 
 
-const tl = gsap.timeline();
+const tl = gsap.timeline({ delay: 2 });
 
 
 
