@@ -49,109 +49,74 @@ tl.to("#logo", {
   }
 });
 
+const pecasDoMapa = document.querySelectorAll('#main-svg svg path'); 
 
-document.addEventListener("DOMContentLoaded", () => {
+pecasDoMapa.forEach(peca => {
+  peca.addEventListener('click', () => {
+    
+    // Trava os cliques na tela para o usuário não quebrar a animação
+    document.body.style.pointerEvents = "none";
 
-  document.body.style.overflow = "hidden";
+    const tlClick = gsap.timeline();
 
-  gsap.set("#main-svg", {
-    autoAlpha: 1,
-    xPercent: 0,
-    z: 0.1,
-    force3D: true
-  });
+    // 1. Faz a imagem de textura desvanecer (sumir) suavemente
+    tlClick.to("#fundo-png", { 
+      autoAlpha: 0, 
+      duration: 1 
+    }, "start") // A tag "start" sincroniza tudo!
 
-  gsap.set("#texto-lateral", {
-    autoAlpha: 0,
-    x: 50
-  });
+    // 2. Muda a cor de fundo do contêiner principal para bordô
+    .to("#main-content", { 
+      backgroundColor: "#72171B", 
+      duration: 1 
+    }, "start")
 
-  const tl = gsap.timeline();
+    // 3A. Mapa voa para a direita e some
+    .to("#main-svg", {
+      x: "20vw",       
+      scale: 0,        
+      autoAlpha: 0,    
+      duration: 1,
+      ease: "power3.inOut"
+    }, "start")
 
-  tl.to("#logo", {
-    scale: 150,
-    duration: 1.5,
-    ease: "power3.in",
-    opacity: 0
-  })
+    // 3B. Texto voa para a esquerda e some
+    .to("#texto-lateral", {
+      x: "-20vw",      
+      scale: 0,
+      autoAlpha: 0,
+      duration: 1,
+      ease: "power3.inOut"
+    }, "start")
 
-  .to("#intro-container", {
-    autoAlpha: 0,
-    duration: 0.5,
-    ease: "power1.inOut"
-  })
+    // 4. Torna o novo contêiner de parabéns visível
+    .set("#modal-parabens-container", { autoAlpha: 1 })
 
-  .to("#main-svg", {
-    xPercent: -75,
-    duration: 2.5,
-    ease: "power2.out"
-  }, "+=0.5")
+    // 5. Primeira expansão da bolinha (Altura)
+    .to("#tela-expansiva", {
+      height: 454,
+      borderRadius: 50,
+      duration: 0.6,
+      ease: "power2.inOut"
+    })
 
-  .to("#texto-lateral", {
-    autoAlpha: 1,
-    x: 0,
-    duration: 1.5,
-    ease: "power2.out",
-    onComplete: () => {
-      document.body.style.overflow = "auto";
-    }
-  });
+    // 6. Segunda expansão (Largura)
+    .to("#tela-expansiva", {
+      width: 925,
+      duration: 0.8,
+      ease: "power2.inOut"
+    })
 
-});
-
-const modal = document.querySelector("#modal-peca");
-
-const titulo = document.querySelector("#modal-titulo");
-const texto = document.querySelector("#modal-texto");
-
-const conteudoPecas = {
-  peca1: {
-    titulo: "Peça 1",
-    texto: "Informações da peça 1"
-  },
-
-  peca2: {
-    titulo: "Peça 2",
-    texto: "Informações da peça 2"
-  },
-
-  peca3: {
-    titulo: "Peça 3",
-    texto: "Informações da peça 3"
-  },
-
-  peca4: {
-    titulo: "Peça 4",
-    texto: "Informações da peça 4"
-  }
-};
-
-document.querySelectorAll(".peca-mapa").forEach((peca)=>{
-
-    peca.addEventListener("click", ()=>{
-
-        titulo.textContent =
-        conteudoPecas[peca.id].titulo;
-
-        texto.textContent =
-        conteudoPecas[peca.id].texto;
-
-        gsap.to(modal,{
-            autoAlpha:1,
-            duration:.3
-        });
-
+    // 7. Revelar o título, texto e botão
+    .to("#conteudo-parabens", {
+      autoAlpha: 1,
+      duration: 0.5,
+      ease: "power1.out",
+      onComplete: () => {
+        // Libera a tela novamente
+        document.body.style.pointerEvents = "auto";
+      }
     });
 
-});
-
-document
-.querySelector("#fechar-modal")
-.addEventListener("click",()=>{
-
-    gsap.to(modal,{
-        autoAlpha:0,
-        duration:.3
-    });
-
+  });
 });
