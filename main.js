@@ -1,17 +1,22 @@
 // 1. Resolve o FOUC, revelando a caixa do mapa suavemente
 gsap.set("#main-svg", { autoAlpha: 1, xPercent: 0, z: 0.1 });
-
-// 2. AQUECIMENTO DA GPU MÁXIMO: 
 // Força o cálculo geométrico prévio (xPercent: 0) 
 // e empurra o mapa para uma camada 3D de hardware dedicada (z: 0.1)
-gsap.set("#main-svg", { 
-  xPercent: 0, 
-  z: 0.1 
-});
 
 gsap.set("#texto-lateral", { x: 50 }); // Posiciona o texto lateral fora da tela para a direita
 
 const tl = gsap.timeline();
+
+const pecasDoMapa = document.querySelectorAll('#main-svg svg path');
+
+pecasDoMapa.forEach(peca => {
+  peca.addEventListener('click', () => {
+
+    window.location.href = "pagina/das/passivas.html"; 
+    
+  });
+});
+
 
 tl.to("#logo", {
     scale: 150,

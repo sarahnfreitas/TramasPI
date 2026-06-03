@@ -74,20 +74,15 @@ body, html {
 
 }
 
-/* efeito de destaque tramalogo */
-#peca-1:hover, #peca-2:hover, #peca-3:hover, #peca-4:hover {
-  fill: #ff5733; /* muda a cor de preenchimento para a cor de destaque */
-  cursor: pointer; /* transforma o mouse em uma "mãozinha" de clique */
-  transition: fill 0.3s ease; /* faz a cor mudar de forma suave */
-}
-
 .peca-mapa {
-  fill: #F7E4D0; 
+  fill: #F3E28B; 
   transition: fill 0.3s ease;
   cursor: pointer;
 }
 
 .peca-mapa:hover {
-  fill: #ff5733; /* <-- COLOQUE AQUI a cor de destaque! */
+  cursor: pointer;
+  fill: #EA972D; /* <-- COLOQUE AQUI a cor de destaque! */
   transition: fill 0.3s ease;
 }
+
