@@ -1,0 +1,20 @@
+.bodyFooter{
+    background-color: #A43D45;
+    width: fit-content;
+    height: 30%;
+}
+
+.insideBody{
+    display: flex;
+    flex-direction: row;
+}
+
+.circle{
+    background-color: gray;
+    border-radius: 50%;
+}
+
+.bodyTexts{
+    display: flex;
+    flex-direction: column;
+}
