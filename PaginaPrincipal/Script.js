@@ -20,18 +20,18 @@
    Se estiver numa subpasta "pages/", use: "pages/PaginaBolivia.html"
    ---------------------------------------------------------- */
 const PAGINAS_PAISES = {
-    brasil:           "PaginaBrasil.html",       // ← coloque o nome do seu arquivo aqui
-    argentina:        "PaginaArgentina.html",
-    bolivia:          "PaginaBolivia.html",
-    chile:            "PaginaChile.html",
-    peru:             "PaginaPeru.html",
-    paraguai:         "PaginaParaguai.html",
-    uruguai:          "PaginaUruguai.html",
-    colombia:         "PaginaColombia.html",
-    venezuela:        "PaginaVenezuela.html",
-    equador:          "PaginaEquador.html",
-    guiana:           "PaginaGuiana.html",
-    suriname:         "PaginaSuriname.html",
+    brasil:           "Brasil/PaginaBrasil.html",       // ← coloque o nome do seu arquivo aqui
+    argentina:        "Argentina/PaginaArgentina.html",
+    bolivia:          "Bolívia/PaginaBolivia.html",
+    chile:            "Chile/PaginaChile.html",
+    peru:             "Peru/PaginaPeru.html",
+    paraguai:         "Paraguai/PaginaParaguai.html",
+    uruguai:          "Uruguai/PaginaUruguai.html",
+    colombia:         "Colômbia/PaginaColombia.html",
+    venezuela:        "Venezuela/PaginaVenezuela.html",
+    equador:          "Equador/PaginaEquador.html",
+    guiana:           "Guiana/PaginaGuiana.html",
+    suriname:         "Suriname/PaginaSuriname.html",
 };
 /* ----------------------------------------------------------
    REFERÊNCIAS DOM (elementos do HTML principal)
