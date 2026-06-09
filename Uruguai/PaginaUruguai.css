@@ -163,7 +163,7 @@ img { max-width: 100%; display: block; }
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
-  color: #3E1C0D;
+  color: #F3E28B;
   text-align: center;
   letter-spacing: 0.02em;
 }
@@ -275,7 +275,7 @@ img { max-width: 100%; display: block; }
    RODAPÉ
    ============================================================ */
 .footer {
-  background-color: #F3E28B;
+  background-color: #48303D;
   display: flex;
   justify-content: space-between; 
   padding: 28px 20px;
