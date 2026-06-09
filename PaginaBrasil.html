@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Bolívia</title>
+    <link rel="stylesheet" href="paginaBrasil.css">
+    <link rel="stylesheet" href="https://use.typekit.net/hls1lkm.css">
+</head>
+
+<body>
+
+    <div class="header-container">
+        <img src="image/CenarioBrasil.png" alt="Cenário" class="header-bg">
+        <img src="image/Tramasnormal.png" alt="Logo Tramas" class="header-logo">
+    </div>
+
+
+    <div class="main-content">
+        <div class="bodyGeral">
+
+            <div class="bodyTexts">
+                <div class="fundoArcanjo">
+                    <h1>Arcanjo Miguel</h1>
+                    <img src="image/SanMiguel 1.png" alt="Arcanjo Miguel" class="arcanjo">
+                </div>
+                <div class="descBrasil">
+                    <h1>BOLÍVIA</h1>
+                    <div class="fundosP">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem
+                            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...</p>
+                    </div>
+                    <div class="fundosP">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <img src="image/image 34.png" alt="Festival" class="imgBoi">
+
+
+            <div class="descBrasil2">
+                <div class="fundosP">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id.</p>
+                </div>
+                <div class="fundosP">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+
+</body>
+
+</html>
