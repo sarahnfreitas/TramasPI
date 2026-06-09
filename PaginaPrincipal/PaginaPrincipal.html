@@ -13,17 +13,27 @@
     </header>
 
     <main>
-
         <div class="map-container">
-         <img src="MapaAmericaDoSul.svg" alt="Mapa da América do Sul" class="mapa-america-sul">   
+
+            <!-- 
+                O SVG é carregado com <object> para que o JavaScript
+                possa acessar os elementos internos (paths dos países).
+                NÃO use <img> — com <img> o JS não consegue interagir.
+            -->
             <object
                 id="southAmericaMap"
                 type="image/svg+xml"
-            data="MapaAmericaDoSul.svg">
+                data="AmericaDoSul.svg"
+                aria-label="Mapa interativo da América do Sul">
             </object>
 
         </div>
 
+        <!-- Tooltip que aparece ao passar o mouse -->
+        <div class="tooltip" id="tooltip">
+            <span class="tooltip-pais" id="tooltipNome"></span>
+            <span class="tooltip-capital" id="tooltipCapital"></span>
+        </div>
     </main>
 
     <script src="Script.js"></script>
