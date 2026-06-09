@@ -1,42 +1,194 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRAMAS</title>
     <link rel="stylesheet" href="PrincipalEstilo.css">
+    <link rel="stylesheet" href="https://use.typekit.net/pcp8rws.css">
 </head>
+
 <body>
 
+    <div id="topo-degrade"></div>
+
     <header>
-        <img src="TramasNormal.png" alt="TRAMAS" class="logo">
+        <div id="container-logo">
+            <img src="../Tramas Logos/TramasNormal.png" alt="Logo Tramas" id="logo-tramas">
+        </div>
     </header>
 
     <main>
-        <div class="map-container">
 
-            <!-- 
-                O SVG é carregado com <object> para que o JavaScript
-                possa acessar os elementos internos (paths dos países).
-                NÃO use <img> — com <img> o JS não consegue interagir.
-            -->
-            <object
-                id="southAmericaMap"
-                type="image/svg+xml"
-                data="AmericaDoSul.svg"
-                aria-label="Mapa interativo da América do Sul">
+        <div class="map-container">
+            <!-- <img src="MapaAmericaDoSul.svg" alt="Mapa da América do Sul" class="mapa-america-sul"> -->
+            <object id="southAmericaMap" type="image/svg+xml" data="AmericaDoSul.svg">
             </object>
 
         </div>
 
-        <!-- Tooltip que aparece ao passar o mouse -->
-        <div class="tooltip" id="tooltip">
-            <span class="tooltip-pais" id="tooltipNome"></span>
-            <span class="tooltip-capital" id="tooltipCapital"></span>
-        </div>
+        <section id="tela-secundaria" class="sessao-tela">
+
+            <section id="textos-tramas">
+                <h1 class="titulo-tramas">O que é o Tramas?</h1>
+                <p class="paragrafo-tramas">O Tramas nasce a partir da necessidade de falar sobre memória, cultura e
+                    futuro
+                    ancestral. Nasce com o objetivo de conectar isso à você, que está dentro de uma nação marcada pelo
+                    mesmo
+                    território: América do Sul.</p>
+                <p class="paragrafo-tramas">Um povo colorido, de identidade única, cultura única, história única, mas
+                    uma
+                    lute resistente igual: a necessidade e alegria de relembrar sempre sua história.</p>
+                <p class="paragrafo-tramas">Não são apenas festivais, é parte de uma cultura necessária para lembrar a
+                    geração atual o que aconteceu no passado. Fazer com que em cada, dança, cada música, no mundo ecoe
+                    toda
+                    a história construída até aqui!</p>
+
+                <h2 class="titulo-equipe">Conheça os Tramáticos</h2>
+
+                <div id="container-scroll-tramaticos">
+
+
+                    <div class="card-tramatico">
+                        <div class="cabecalho-card">
+                            <div class="foto-circular" style="background-image: url('../integrantes/Nickolas.png');">
+                            </div>
+                            <div class="info-padrao">
+                                <h3 class="nome-card">Nickolas Martins</h3>
+                                <h4 class="cargo-card">Designer Programador</h4>
+                            </div>
+                        </div>
+                        <div class="corpo-card">
+                            <p class="bio-card">Nickolas Martins, estudante de Produção Multimídia, com foco na
+                                integração
+                                entre criatividade e tecnologia. Sendo a verdadeira personificação de um produtor
+                                multimídia, atua de forma versátil na estruturação e no desenvolvimento de soluções
+                                digitais. Para o projeto, contribuiu ativamente assumindo o cuidado direto das frentes
+                                de
+                                Prototipagem, Programação e Design.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="card-tramatico">
+                        <div class="cabecalho-card">
+                            <div class="foto-circular" style="background-image: url('../integrantes/Jamile.png');">
+                            </div>
+                            <div class="info-padrao">
+                                <h3 class="nome-card">Jamile Costa</h3>
+                                <h4 class="cargo-card">Designer Ilustrador</h4>
+                            </div>
+                        </div>
+                        <div class="corpo-card">
+                            <p class="bio-card">Jamile Costa, 19 anos, estudante de produção Multimídia, técnica em
+                                audiovisual, com foco em direção de arte e roteiro.
+                                Também atua produzindo design para interfaces digitais e identidade visual.
+                                Estagiária de Marketing, produz conteúdos e deseja focar sua carreira em Comunicação,
+                                ilustração e design para animações.
+                                Para o projeto contribuiu para a idealização do projeto, na construção da identidade
+                                visual
+                                como designer e ilustradora</p>
+                        </div>
+                    </div>
+
+
+                    <div class="card-tramatico">
+                        <div class="cabecalho-card">
+                            <div class="foto-circular" style="background-image: url('../integrantes/Sarah.png');"></div>
+                            <div class="info-padrao">
+                                <h3 class="nome-card">Sarah Nunes</h3>
+                                <h4 class="cargo-card">Designer Programador</h4>
+                            </div>
+                        </div>
+                        <div class="corpo-card">
+                            <p class="bio-card">Sarah Nunes, 19 anos, estudante de Produção Multimídia, com foco em
+                                Design e
+                                Ilustração.
+                                Atualmente está inserida na Apple Developer Academy na produção de Design UX/UI em
+                                interfaces digitais, criação de identidade visual e também no âmbito de desenvolvimento
+                                em
+                                código.
+                                Para o projeto, contribuiu para a Prototipagem, Programação, construção de identidade
+                                visual
+                                do site.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="card-tramatico">
+                        <div class="cabecalho-card">
+                            <div class="foto-circular" style="background-image: url('../integrantes/Ravi.png');"></div>
+                            <div class="info-padrao">
+                                <h3 class="nome-card">Ravi Trofino</h3>
+                                <h4 class="cargo-card">Designer Ilustrador</h4>
+                            </div>
+                        </div>
+                        <div class="corpo-card">
+                            <p class="bio-card">Ravi Trofino, 23 anos, estudante de producao Multimidia, tecnico em
+                                informatica. Atua como diretor de arte em uma produtora musical, produz capas de discos,
+                                videoclipes e campanhas de marketing para divulgaçao das musicas.
+                                Para o projeto contribuiu para a idealizacao do projeto e nas ilustraçoes .</p>
+                        </div>
+                    </div>
+
+                </div>
+                </div>
+
+                </div>
+            </section>
+
+
+        </section>
     </main>
+
+    <footer class="footer">
+        <img src="/Tramas Logos/TramasNormal.png" alt="Logo Tramas" class="footer__logo" />
+        <a href="https://www.instagram.com/astramas_/" target="_blank" class="footer__insta">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none" />
+            </svg>
+            @astramas_
+        </a>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/Draggable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/DrawSVGPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/EaselPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/Flip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/GSDevTools.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/InertiaPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/MotionPathHelper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/MotionPathPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/MorphSVGPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/Observer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/Physics2DPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/PhysicsPropsPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/PixiPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrambleTextPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+    <!-- ScrollSmoother requires ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollSmoother.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/SplitText.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/TextPlugin.min.js"></script>
+
+    <!-- RoughEase, ExpoScaleEase and SlowMo are all included in the EasePack file -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/EasePack.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/CustomEase.min.js"></script>
+    <!-- CustomBounce requires CustomEase -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/CustomBounce.min.js"></script>
+    <!-- CustomWiggle requires CustomEase -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/CustomWiggle.min.js"></script>
 
     <script src="Script.js"></script>
 
 </body>
+
 </html>

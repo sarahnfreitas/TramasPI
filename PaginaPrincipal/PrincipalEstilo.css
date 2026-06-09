@@ -1,124 +1,380 @@
-/* ============================================================
+/* ==================================================
    RESET
-   ============================================================ */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* ============================================================
-   BODY — fundo azul escuro, layout em coluna centralizada
-   ============================================================ */
-body {
-    background-color: #06388A;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+html,
+body{
+    width:100%;
+    overflow-x:hidden;
+}
+
+/* ==================================================
+   BODY
+================================================== */
+
+body{
     font-family: Arial, sans-serif;
 
-    /* Usa a imagem de fundo texturizada se disponível */
-    background-image: url('BackgorundPrincipal.png');
+    background-color:#06388A;
+
+    background-image:url("BackgorundPrincipal.png");
+    background-size:cover;
+    background-position:center top;
+    background-repeat:no-repeat;
+}
+
+/* ==================================================
+   LOGO
+================================================== */
+
+header{
+    position:fixed;
+
+    top:15px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    z-index:1000;
+}
+
+#logo-tramas{
+    width:140px;
+    height:auto;
+    display:block;
+}
+
+/* ==================================================
+   MAPA
+================================================== */
+
+.map-container{
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding-top:80px;
+}
+
+#southAmericaMap{
+    width:500px;
+    max-width:80vw;
+    border:none;
+    background:transparent;
+}
+
+/* ==================================================
+   SEGUNDA TELA
+================================================== */
+
+#tela-secundaria{
+    width:100%;
+    background:#ECE3D3;
+
+    padding:100px 0 0;
+}
+
+/* ==================================================
+   TEXTO TRAMAS
+================================================== */
+
+#textos-tramas{
+    width:100%;
+    text-align:center;
+}
+
+.titulo-tramas{
+    color:#B23D44;
+
+    font-size:2.2rem;
+    font-weight:700;
+
+    margin-bottom:50px;
+}
+
+.paragrafo-tramas{
+    color:#B23D44;
+
+    max-width:850px;
+
+    margin:0 auto 30px;
+
+    line-height:1.8;
+
+    font-size:1rem;
+}
+
+/* ==================================================
+   SEÇÃO DOS TRAMÁTICOS
+================================================== */
+
+.titulo-equipe{
+    margin-top:100px;
+
+    background:#D89C1D;
+
+    color:white;
+
+    padding:40px 0;
+
+    font-size:2rem;
+}
+
+/* ==================================================
+   CONTAINER DOS CARDS
+================================================== */
+
+#container-scroll-tramaticos{
+    background:#D89C1D;
+
+    width:100%;
+
+    display:flex;
+    gap:12px;
+
+    overflow-x:auto;
+
+    padding:0 15px 120px;
+
+    scrollbar-width:none;
+}
+
+#container-scroll-tramaticos::-webkit-scrollbar{
+    display:none;
+}
+
+
+
+
+#container-scroll-tramaticos {
+    width: 100vw;
+    display: flex;
+    gap: 30px;
+    
+    
+    padding-top: 20px;
+    padding-bottom: 40px;
+    padding-right: 5vw;
+    
+   
+    padding-left: 0vw; 
+    
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory; 
+    visibility: hidden; 
+    min-height: 450px;
+    align-items: flex-start; 
+    scrollbar-width: thin; 
+    scrollbar-color: #F3E28B rgba(0, 0, 0, 0.2); 
+}
+
+#container-scroll-tramaticos {
+    width: 100%; 
+    box-sizing: border-box; 
+    display: flex;
+    gap: 30px;
+    padding: 20px 5% 40px 5%;
+    
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory; 
+    visibility: hidden; 
+    min-height: 450px; 
+    align-items: flex-start; 
+  
+}
+
+
+.card-tramatico {
+    width: 325px; 
+    height: 120px; 
+    box-sizing: border-box; 
+    
+    background: #A43D45;
+    border-radius: 20px;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column; 
+    padding: 20px; 
+    cursor: pointer;
+    overflow: hidden; 
+    position: relative;
+    
+    
+    transition: height 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+
+.card-tramatico:hover {
+    height: 360px; 
+}
+
+
+.cabecalho-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 80px; 
+}
+
+.foto-circular {
+    width: 70px; 
+    height: 70px;
+    border-radius: 50%;
+    background-color: lightgray;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    flex-shrink: 0;
 }
 
-/* ============================================================
-   HEADER — logo TRAMAS centralizada no topo
-   ============================================================ */
-header {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 30px 0 20px;
+.nome-card {
+    color: #FFF;
+    font-family: 'Coolvetica', sans-serif;
+    font-size: 24px; 
+    font-weight: 700;
+    margin: 0;
 }
 
-.logo {
-    width: 180px;
-    height: auto;
-    /* Remove fundo preto da logo, se ela tiver transparência */
-    /* Se a logo tiver fundo preto, use mix-blend-mode: screen */
+.cargo-card {
+    color: #F3E28B;
+    font-family: "Snaga Uni Display", sans-serif;
+    font-size: 14px; 
+    font-weight: 600;
+    margin: 5px 0 0 0;
 }
 
-/* ============================================================
-   CONTAINER DO MAPA
-   ============================================================ */
-.map-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 10px 20px 40px;
+
+.corpo-card {
+    max-height: 220px; 
+    overflow-y: auto;  
+    padding-right: 8px; 
+    margin-top: 15px; 
 }
 
-/* 
-   O <object> carrega o SVG e permite interação via JS.
-   Ajuste a largura aqui para controlar o tamanho do mapa.
-*/
-#southAmericaMap {
-    width: 420px;       /* ← AJUSTE AQUI para mudar o tamanho do mapa */
-    max-width: 90vw;
-    height: auto;
-    display: block;
-    /* Remove qualquer borda ou fundo padrão do <object> */
-    border: none;
+.corpo-card::-webkit-scrollbar {
+    width: 4px;
+}
+
+.corpo-card::-webkit-scrollbar-track {
     background: transparent;
 }
-
-/* ============================================================
-   TOOLTIP — aparece ao lado do cursor com nome + capital
-   ============================================================ */
-.tooltip {
-    position: fixed;
-    background-color: #5B2417;
-    color: #F3E1A0;
-    border-radius: 8px;
-    padding: 8px 14px;
-    pointer-events: none;    /* não bloqueia eventos do mouse */
-    z-index: 999;
-    opacity: 0;
-    transform: translateY(4px);
-    transition: opacity 0.2s ease, transform 0.2s ease;
-    min-width: 110px;
-    text-align: center;
-    font-family: Arial, sans-serif;
+.corpo-card::-webkit-scrollbar-thumb {
+    background: #cccccc; 
+    border-radius: 10px; 
 }
 
-/* Quando o JS adiciona a classe .visivel, o tooltip aparece */
-.tooltip.visivel {
-    opacity: 1;
-    transform: translateY(0);
+.card-tramatico:hover .corpo-card {
+    opacity: 1; 
+    transform: translateY(0); 
+    transition-delay: 0.2s; 
 }
 
-.tooltip-pais {
-    display: block;
-    font-weight: bold;
-    font-size: 0.92rem;
-    letter-spacing: 0.03em;
+.bio-card {
+    white-space: normal !important; 
+    word-wrap: break-word;
+    margin: 0; 
+    color: #ffffff;
 }
 
-.tooltip-capital {
-    display: block;
-    font-size: 0.75rem;
-    opacity: 0.8;
-    margin-top: 2px;
+
+.nome-card, 
+.cargo-card {
+    text-align: left; 
+    margin-left: 0;   
+    padding-left: 0;  
 }
 
-.tooltip-capital::before {
-    content: 'Capital: ';
+
+.nome-card {
+    margin-bottom: 4px; 
+    margin-top: 0;
 }
 
-/* ============================================================
+.cargo-card {
+    margin-top: 0;
+}
+
+.footer {
+  background-color: #3E1C0D;
+  display: flex;
+  justify-content: space-between; 
+  padding: 28px 20px;
+}
+
+.footer__logo {
+  width: 110px;
+  opacity: 0.88;
+}
+
+.footer__insta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #F3E4A0;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.footer__insta:hover {
+  opacity: 1;
+}
+
+.footer__insta svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* ==================================================
    RESPONSIVO
-   ============================================================ */
-@media (max-width: 600px) {
-    #southAmericaMap {
-        width: 95vw;
+================================================== */
+
+@media (max-width:768px){
+
+    #logo-tramas{
+        width:100px;
     }
-    .logo {
-        width: 140px;
+
+    #southAmericaMap{
+        width:320px;
     }
+
+    .titulo-tramas{
+        font-size:1.8rem;
+    }
+
+    .titulo-equipe{
+        font-size:1.5rem;
+    }
+
+    .paragrafo-tramas{
+        width:90%;
+    }
+
+    .card-tramatico{
+        width:220px;
+    }
+}
+
+#topo-degrade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 150px; 
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    
+    z-index: 990; 
+    pointer-events: none; 
 }
