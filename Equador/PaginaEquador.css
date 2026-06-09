@@ -1,0 +1,386 @@
+/* ============================================================
+   TRAMAS – Bolívia · Diablada de Oruro
+   style.css
+
+   Paleta:
+     Fundo geral:        #D88A2A  (laranja queimado)
+     Card bege:          #F3E4A0  (bege claro)
+     Card marrom:        #8B3F2B  (marrom avermelhado)
+     Texto escuro:       #3E1C0D
+     Branco suave:       #FDF6E3
+   ============================================================ */
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #52712F;   /* fundo laranja queimado em toda a página */
+  color: #3E1C0D;
+  line-height: 1.72;
+  font-size: 15px;
+}
+
+img { max-width: 100%; display: block; }
+
+/* ============================================================
+   HERO BANNER
+   O cenário andino ocupa 100% da largura; a logo fica sobreposta
+   e centrada no topo. Sem overlay — a imagem aparece limpa.
+   ============================================================ */
+.hero {
+  position: relative;
+  width: 100%;
+  line-height: 0;          /* elimina gap abaixo da img */
+}
+
+/* Logo centrada, flutuando sobre a imagem */
+.hero__logo {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(130px, 20vw, 240px);
+  z-index: 2;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.45));
+}
+
+/* Imagem do cenário: 100% largura, altura proporcional natural */
+.hero__bg {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================================
+   CORPO DA PÁGINA — fundo #D88A2A já definido no body
+   ============================================================ */
+.page-body {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 28px 60px;
+}
+
+/* ============================================================
+   TÍTULO PRINCIPAL
+   "BOLÍVIA" grande à direita + "Diablada de Oruro" abaixo
+   ============================================================ */
+.section-title {
+  text-align: right;
+  padding: 22px 0 18px;
+}
+
+.title-country {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2.6rem, 7vw, 4.2rem);
+  font-weight: 900;
+  color: #DBD7D6;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+
+.title-event {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1rem, 3vw, 1.55rem);
+  font-weight: 600;
+  color: #DBD7D6;
+  letter-spacing: 0.04em;
+  margin-top: 4px;
+}
+
+/* ============================================================
+   LAYOUT HELPERS — GRIDS DE DUAS COLUNAS
+   ============================================================ */
+
+/* Colunas iguais */
+.layout-dois-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  align-items: stretch;
+}
+
+/* Assimétrico: 40% / 60% (bandeira | texto) */
+.layout-assimetrico {
+  grid-template-columns: 40% 1fr;
+}
+
+/* Assimétrico invertido: 55% / 45% (texto | máscara) */
+.layout-assimetrico-inv {
+  grid-template-columns: 55% 1fr;
+}
+
+/* ============================================================
+   CARDS REUTILIZÁVEIS
+   ============================================================ */
+.card-bege {
+  background-color: #DBD7D6;
+  border-radius: 14px;
+  padding: 18px 20px;
+}
+
+.card-marrom {
+  background-color: #1B241B;
+  border-radius: 14px;
+  padding: 18px 20px;
+}
+
+.card-marrom p,
+.card-marrom li {
+  color: #FDF6E3;
+}
+
+/* ============================================================
+   SEÇÕES DE PERSONAGENS (Arcanjo Miguel e Lúcifer)
+   ============================================================ */
+.section-personagem {
+  margin-bottom: 18px;
+}
+
+/* Card do personagem: título + imagem centralizada */
+.card-personagem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 14px;
+  border-radius: 14px;
+  padding: 20px 16px 24px;
+}
+
+.card-personagem__titulo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #F3E4A0;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.card-personagem__img {
+  width: 100%;
+  max-width: 200px;
+  object-fit: contain;
+  flex: 1;
+}
+
+/* Coluna de dois cards de texto empilhados */
+.col-textos {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.col-textos .card-texto {
+  flex: 1;
+}
+
+/* ============================================================
+   SEÇÃO FESTIVAL — foto da dança + texto descritivo
+   ============================================================ */
+.section-festival {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.festival__foto-wrap {
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  max-height: 380px;
+}
+
+.festival__foto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* O card de descrição do festival usa card-marrom (fundo #8B3F2B) */
+.festival__descricao {
+  /* herda .card-marrom */
+}
+
+/* ============================================================
+   SEÇÃO BOLÍVIA – BLOCO SUPERIOR (bandeira + texto)
+   ============================================================ */
+.section-bolivia-top {
+  margin-bottom: 18px;
+  align-items: stretch;
+}
+
+.bolivia__bandeira-wrap {
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.bolivia__bandeira {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+}
+
+.bolivia__texto-top {
+  display: flex;
+  align-items: center;
+}
+
+/* ============================================================
+   SEÇÃO BOLÍVIA – BLOCO INFERIOR (texto + máscara)
+   ============================================================ */
+.section-bolivia-bottom {
+  margin-bottom: 0;
+  align-items: stretch;
+}
+
+.bolivia__texto-bottom {
+  /* herda .card-bege */
+}
+
+.bolivia__mascara-wrap {
+  border-radius: 14px;
+  overflow: hidden;
+  max-height: 340px;
+}
+
+.bolivia__mascara {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 14px;
+  display: block;
+}
+
+/* ============================================================
+   RODAPÉ
+   ============================================================ */
+.footer {
+  background-color: #1B241B;
+  display: flex;
+  justify-content: space-between; 
+  padding: 28px 20px;
+}
+
+.footer__logo {
+  width: 110px;
+  opacity: 0.88;
+}
+
+/* ============================================================
+   RESPONSIVIDADE — TABLET (≤ 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+  .page-body {
+    padding: 0 18px 48px;
+    max-width: 100%;
+  }
+
+  .hero__logo {
+    width: 160px;
+    top: 14px;
+  }
+
+  .layout-assimetrico,
+  .layout-assimetrico-inv {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .festival__foto-wrap {
+    max-height: 280px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVIDADE — MOBILE (≤ 540px)
+   Tudo vira coluna única, imagens centralizadas, 100% de largura.
+   ============================================================ */
+@media (max-width: 540px) {
+  .page-body {
+    padding: 0 12px 40px;
+  }
+
+  .hero__logo {
+    width: 120px;
+    top: 10px;
+  }
+
+  /* Todas as grades viram coluna única */
+  .layout-dois-col,
+  .layout-assimetrico,
+  .layout-assimetrico-inv {
+    grid-template-columns: 1fr;
+  }
+
+  /* Personagem: imagem centralizada */
+  .card-personagem {
+    max-width: 320px;
+    margin: 0 auto;
+    min-height: 490px;
+  }
+
+  .card-personagem__img {
+  width: 90%;
+  max-width: 90%;
+  object-fit: contain;
+  }
+
+  /* Foto do festival menor */
+  .festival__foto-wrap {
+    max-height: 200px;
+  }
+
+  /* Máscara menor */
+  .bolivia__mascara-wrap {
+    max-height: 220px;
+  }
+
+  /* Bandeira: altura automática */
+  .bolivia__bandeira-wrap {
+    max-height: 140px;
+  }
+
+  .section-title {
+    text-align: center;
+    padding: 18px 0 14px;
+  }
+}
+.footer__insta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #F3E4A0;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.footer__insta:hover {
+  opacity: 1;
+}
+
+.footer__insta svg {
+  width: 22px;
+  height: 22px;
+}
