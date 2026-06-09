@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PaginaVenezuela</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="PaginaVenezuela.css" />
+</head>
+<body>
+
+  <!-- ===================== HERO BANNER ===================== -->
+  <!-- Cenário andino ocupa toda a largura, logo TRAMAS centrada no topo -->
+  <header class="hero">
+    <img src="Tramasnormal.png" alt="Logo Tramas" class="hero__logo" />
+    <img src="VenezuelaCenario.png" alt="Cenário andino colorido de Venezuela" class="hero__bg" />
+  </header>
+
+  <!-- ===================== CORPO DA PÁGINA (fundo #D88A2A) ===================== -->
+  <main class="page-body">
+
+    <!-- ===================== TÍTULO PRINCIPAL ===================== -->
+    <!-- Alinhado à direita, "COLÔMBIA" grande e "Diablada de Oruro" abaixo -->
+    <section class="section-title">
+      <h1 class="title-country">VENEZUELA</h1>
+      <h2 class="title-event">Diablos Danzantes</h2>
+    </section>
+
+    <!-- ===================== SEÇÃO ARCANJO MIGUEL ===================== -->
+    <!-- Esquerda: card marrom com imagem | Direita: 2 cards bege com texto -->
+    <section class="section-personagem layout-dois-col" aria-label="Arcanjo Miguel">
+
+      <!-- Coluna esquerda: card do personagem -->
+      <div class="card-personagem card-marrom">
+        <h3 class="card-personagem__titulo">Chuao</h3>
+        <img src="Chuao.png" alt="Chuao da Festa de La Tirana" class="card-personagem__img" />
+      </div>
+
+      <!-- Coluna direita: dois cards de texto empilhados -->
+      <div class="col-textos">
+        <div class="card-texto card-bege">
+          <p>A tradição dos Diablos Danzantes surgiu há cerca de 400 anos nas regiões centrais da costa da Venezuela, como resultado do sincretismo entre o catolicismo imposto durante a colonização espanhola e as práticas culturais de origem africana e indígena.</p>
+        </div>
+        <div class="card-texto card-bege">
+          <p>Os personagens associados a Chuao e Naiguatá fazem parte das cofradias dos Diablos Danzantes de Corpus Christi, uma tradição afro-venezuelana reconhecida como Patrimônio Cultural Imaterial da Humanidade pela UNESCO. Essa manifestação ritual representa o triunfo do bem sobre o mal e integra elementos africanos, indígenas e católicos.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ===================== SEÇÃO LÚCIFER ===================== -->
+    <!-- Esquerda: 2 cards bege com texto | Direita: card marrom com imagem -->
+    <section class="section-personagem layout-dois-col" aria-label="Lúcifer">
+
+      <!-- Coluna esquerda: dois cards de texto empilhados -->
+      <div class="col-textos">
+        <div class="card-texto card-bege">
+          <p>Na tradição de Chuao, os Diablos Danzantes realizam procissões acompanhadas por tambores e músicas tradicionais, executando movimentos de penitência e devoção ao longo do percurso. O ritual culmina diante da igreja, onde ocorre a rendição simbólica dos diabos ao Santíssimo Sacramento. A celebração representa a luta entre o bem e o mal, reafirmando a vitória do sagrado e da fé sobre as forças malignas.</p>
+        </div>
+        <div class="card-texto card-bege">
+          <p>Em Naiguatá, os Diablos Danzantes participam de um ritual marcado por procissões, música de tambores e forte envolvimento da comunidade. Durante o Corpus Christi, os dançarinos percorrem as ruas da cidade e realizam apresentações diante da igreja e em visitas simbólicas às casas. A celebração se destaca pela ampla participação popular, reunindo pessoas de diferentes idades e, em algumas tradições, também mulheres como danzantes.</p>
+        </div>
+      </div>
+
+      <!-- Coluna direita: card do personagem -->
+      <div class="card-personagem card-marrom">
+        <h3 class="card-personagem__titulo">Naiguatá</h3>
+        <img src="Naiguata.png" alt="Jaguar-Jaguar da Tunantada" class="card-personagem__img" />
+      </div>
+
+    </section>
+
+    <!-- ===================== SEÇÃO DESTAQUE – FOTO DA DANÇA ===================== -->
+    <!-- Foto grande quase largura total + card bege com texto descritivo abaixo -->
+    <section class="section-festival" aria-label="A dança Diablada">
+      <div class="festival__foto-wrap">
+        <img src="VenezuelaFest.png" alt="Dançarinos da Festa do Sol" class="festival__foto" />
+      </div>
+      <div class="card-texto card-marrom festival__descricao">
+        <p>A tradição nasceu há mais de 300 anos, na cidade de São Francisco de Yare. Os fiéis dançam em frente ao Santíssimo Sacramento, para cumprirem suas promessas, caso suas orações fossem atendidas. As danças e as fantasias carregam significado: as máscaras representam o mal, enquanto a dança simboliza a vitória do bem, se movendo ao ritmo dos tambores, e reverenciando a Eucaristia. As máscaras e fantasias são feitas manualmente pelos locais, com chifres, presas e desenhos únicos que marcam a cultura Venezuelana.</p>
+      </div>
+    </section>
+
+    <!-- ===================== SEÇÃO BOLÍVIA – BLOCO SUPERIOR ===================== -->
+    <!-- Esquerda: bandeira (~40%) | Direita: card bege com texto (~60%) -->
+    <section class="section-bolivia-top layout-dois-col layout-assimetrico" aria-label="Sobre a Bolívia">
+      <div class="bolivia__bandeira-wrap">
+        <img src="VenezuelaFlag.png" alt="Bandeira da Venezuela" class="bolivia__bandeira" />
+      </div>
+      <div class="card-texto card-bege bolivia__texto-top">
+        <p>A Venezuela reúne influências indígenas, africanas e europeias que moldaram sua identidade cultural ao longo dos séculos. O espanhol é a língua oficial, coexistindo com diversos idiomas indígenas. Sua história recente inclui períodos de instabilidade política, crises econômicas e intensos debates sobre identidade nacional.</p>
+      </div>
+    </section>
+
+    <!-- ===================== SEÇÃO BOLÍVIA – BLOCO INFERIOR ===================== -->
+    <!-- Esquerda: card bege com texto (~55%) | Direita: foto máscara (~45%) -->
+    <section class="section-bolivia-bottom layout-dois-col layout-assimetrico-inv" aria-label="História da Bolívia">
+      <div class="card-texto card-bege bolivia__texto-bottom">
+        <p>Os Diablos Danzantes de Yare representam uma das tradições mais emblemáticas do país. Com máscaras artesanais e danças ritualísticas, a celebração simboliza a vitória do bem sobre o mal. Ao mesmo tempo, preserva conhecimentos transmitidos entre gerações, demonstrando como a cultura popular se torna espaço de memória e continuidade ancestral.</p>
+      </div>
+      <div class="bolivia__mascara-wrap">
+        <img src="VenezuelaPic.png" alt="Máscara típica da Festa do Sol" class="bolivia__mascara" />
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== RODAPÉ ===================== -->
+ <footer class="footer">
+  <img src="Tramasnormal.png" alt="Logo Tramas" class="footer__logo" />
+  <a href="https://www.instagram.com/astramas_/" target="_blank" class="footer__insta">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
+    </svg>
+    @astramas_
+  </a>
+</footer>
+
+</body>
+</html>

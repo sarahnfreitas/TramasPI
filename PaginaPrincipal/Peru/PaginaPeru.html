@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PaginaPeru</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="PaginaPeru.css" />
+</head>
+<body>
+
+  <!-- ===================== HERO BANNER ===================== -->
+  <!-- Cenário andino ocupa toda a largura, logo TRAMAS centrada no topo -->
+  <header class="hero">
+    <img src="Tramasnormal.png" alt="Logo Tramas" class="hero__logo" />
+    <img src="CenarioPeru.png" alt="Cenário andino colorido de Peru" class="hero__bg" />
+  </header>
+
+  <!-- ===================== CORPO DA PÁGINA (fundo #D88A2A) ===================== -->
+  <main class="page-body">
+
+    <!-- ===================== TÍTULO PRINCIPAL ===================== -->
+    <!-- Alinhado à direita, "COLÔMBIA" grande e "Diablada de Oruro" abaixo -->
+    <section class="section-title">
+      <h1 class="title-country">PERU</h1>
+      <h2 class="title-event">Tunatada</h2>
+    </section>
+
+    <!-- ===================== SEÇÃO ARCANJO MIGUEL ===================== -->
+    <!-- Esquerda: card marrom com imagem | Direita: 2 cards bege com texto -->
+    <section class="section-personagem layout-dois-col" aria-label="Arcanjo Miguel">
+
+      <!-- Coluna esquerda: card do personagem -->
+      <div class="card-personagem card-marrom">
+        <h3 class="card-personagem__titulo">María e Viejo</h3>
+        <img src="MariayViejo.png" alt="María e Viejo da Festa de La Tirana" class="card-personagem__img" />
+      </div>
+
+      <!-- Coluna direita: dois cards de texto empilhados -->
+      <div class="col-textos">
+        <div class="card-texto card-bege">
+          <p>María Pichana é uma figura cômica da Tunantada, tradicionalmente interpretada por homens vestidos como mulheres. Com movimentos ágeis e gestos exagerados, ela interage com o público e traz humor para a celebração, representando uma mulher do campo esperta e carismática. Sua presença reforça o caráter satírico da festa, utilizando o riso como forma de entretenimento e crítica social.</p>
+        </div>
+        <div class="card-texto card-bege">
+          <p>O Viejo é um personagem tradicional da Tunantada que representa a velhice por meio de uma performance marcada pelo humor e pela expressividade. Seus movimentos lentos, gestos exagerados e postura curvada criam uma figura caricata que diverte o público durante a celebração.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ===================== SEÇÃO LÚCIFER ===================== -->
+    <!-- Esquerda: 2 cards bege com texto | Direita: card marrom com imagem -->
+    <section class="section-personagem layout-dois-col" aria-label="Lúcifer">
+
+      <!-- Coluna esquerda: dois cards de texto empilhados -->
+      <div class="col-textos">
+        <div class="card-texto card-bege">
+          <p>O personagem Jamille (também chamado de El Boliviano ou associado ao Kallawaya) é uma figura da Tunantada, dança tradicional de Jauja (Peru). Ele representa o especialista em plantas medicinais e o curandeiro andino proveniente do altiplano sul-andino, integrando o conjunto de personagens que satirizam e representam diferentes grupos sociais da época colonial e republicana.</p>
+        </div>
+        <div class="card-texto card-bege">
+          <p>o Jamille representa o “homem do sul andino”, ligado aos conhecimentos tradicionais de cura, especialmente o uso de plantas medicinais, associado aos antigos curandeiros itinerantes conhecidos como kallawayas.</p>
+        </div>
+      </div>
+
+      <!-- Coluna direita: card do personagem -->
+      <div class="card-personagem card-marrom">
+        <h3 class="card-personagem__titulo">Jamille</h3>
+        <img src="Jamille.png" alt="Jamille da Tunantada" class="card-personagem__img" />
+      </div>
+
+    </section>
+
+    <!-- ===================== SEÇÃO DESTAQUE – FOTO DA DANÇA ===================== -->
+    <!-- Foto grande quase largura total + card bege com texto descritivo abaixo -->
+    <section class="section-festival" aria-label="A dança Diablada">
+      <div class="festival__foto-wrap">
+        <img src="PeruFest.png" alt="Dançarinos da Festa do Sol" class="festival__foto" />
+      </div>
+      <div class="card-texto card-marrom festival__descricao">
+        <p>A Tunantada é um estilo de música e dança tradicional, da província de Jauja, e foi
+reconhecida como Patrimônio Cultural do Peru em 2011. Sua origem remonta ao período colonial, quando a população local começou a imitar, de forma satírica, a chegada do vice-rei Francisco de Toledo e sua comitiva.
+O próprio nome vem da palavra espanhola “tunante”, que significa patifaria, devido ao caráter irônico da dança, que questiona estereótipos sociais e étnicos da época colonial. O desfile conta com personagens mascarados e figurinos marcantes, como o Chuto, Tucumano (argentino), María Pichana e o Velho, Jamille (boliviano), Jaujina e entre outros.</p>
+      </div>
+    </section>
+
+    <!-- ===================== SEÇÃO BOLÍVIA – BLOCO SUPERIOR ===================== -->
+    <!-- Esquerda: bandeira (~40%) | Direita: card bege com texto (~60%) -->
+    <section class="section-bolivia-top layout-dois-col layout-assimetrico" aria-label="Sobre a Bolívia">
+      <div class="bolivia__bandeira-wrap">
+        <img src="PeruFlag.png" alt="Bandeira do Peru" class="bolivia__bandeira" />
+      </div>
+      <div class="card-texto card-bege bolivia__texto-top">
+        <p>Berço de grandes civilizações andinas, o Peru preserva uma das heranças indígenas mais visíveis da América do Sul. O espanhol convive com idiomas como o quéchua e o aimará, falados por milhões de pessoas. O país atravessou períodos de colonização, conflitos internos e governos autoritários ao longo de sua história.</p>
+      </div>
+    </section>
+
+    <!-- ===================== SEÇÃO BOLÍVIA – BLOCO INFERIOR ===================== -->
+    <!-- Esquerda: card bege com texto (~55%) | Direita: foto máscara (~45%) -->
+    <section class="section-bolivia-bottom layout-dois-col layout-assimetrico-inv" aria-label="História da Bolívia">
+      <div class="card-texto card-bege bolivia__texto-bottom">
+        <p>A Tunantada transforma esse passado em representação cultural. Por meio da sátira, dos personagens mascarados e dos figurinos elaborados, a dança questiona hierarquias herdadas do período colonial. O festival preserva memórias históricas e utiliza o humor como ferramenta de resistência e reflexão social.</p>
+      </div>
+      <div class="bolivia__mascara-wrap">
+        <img src="PeruPic.png" alt="Máscara típica da Festa do Sol" class="bolivia__mascara" />
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== RODAPÉ ===================== -->
+ <footer class="footer">
+  <img src="Tramasnormal.png" alt="Logo Tramas" class="footer__logo" />
+  <a href="https://www.instagram.com/astramas_/" target="_blank" class="footer__insta">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
+    </svg>
+    @astramas_
+  </a>
+</footer>
+
+</body>
+</html>

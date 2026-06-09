@@ -1,0 +1,124 @@
+/* ============================================================
+   RESET
+   ============================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ============================================================
+   BODY — fundo azul escuro, layout em coluna centralizada
+   ============================================================ */
+body {
+    background-color: #06388A;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+
+    /* Usa a imagem de fundo texturizada se disponível */
+    background-image: url('BackgorundPrincipal.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* ============================================================
+   HEADER — logo TRAMAS centralizada no topo
+   ============================================================ */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0 20px;
+}
+
+.logo {
+    width: 180px;
+    height: auto;
+    /* Remove fundo preto da logo, se ela tiver transparência */
+    /* Se a logo tiver fundo preto, use mix-blend-mode: screen */
+}
+
+/* ============================================================
+   CONTAINER DO MAPA
+   ============================================================ */
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px 40px;
+}
+
+/* 
+   O <object> carrega o SVG e permite interação via JS.
+   Ajuste a largura aqui para controlar o tamanho do mapa.
+*/
+#southAmericaMap {
+    width: 420px;       /* ← AJUSTE AQUI para mudar o tamanho do mapa */
+    max-width: 90vw;
+    height: auto;
+    display: block;
+    /* Remove qualquer borda ou fundo padrão do <object> */
+    border: none;
+    background: transparent;
+}
+
+/* ============================================================
+   TOOLTIP — aparece ao lado do cursor com nome + capital
+   ============================================================ */
+.tooltip {
+    position: fixed;
+    background-color: #5B2417;
+    color: #F3E1A0;
+    border-radius: 8px;
+    padding: 8px 14px;
+    pointer-events: none;    /* não bloqueia eventos do mouse */
+    z-index: 999;
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    min-width: 110px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Quando o JS adiciona a classe .visivel, o tooltip aparece */
+.tooltip.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tooltip-pais {
+    display: block;
+    font-weight: bold;
+    font-size: 0.92rem;
+    letter-spacing: 0.03em;
+}
+
+.tooltip-capital {
+    display: block;
+    font-size: 0.75rem;
+    opacity: 0.8;
+    margin-top: 2px;
+}
+
+.tooltip-capital::before {
+    content: 'Capital: ';
+}
+
+/* ============================================================
+   RESPONSIVO
+   ============================================================ */
+@media (max-width: 600px) {
+    #southAmericaMap {
+        width: 95vw;
+    }
+    .logo {
+        width: 140px;
+    }
+}
