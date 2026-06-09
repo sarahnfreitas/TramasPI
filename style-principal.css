@@ -1,0 +1,309 @@
+
+#container-scroll-tramaticos {
+    cursor: grab; 
+}
+
+#container-scroll-tramaticos:active {
+    cursor: grabbing; 
+}
+
+.card-tramatico {
+    user-select: none; 
+}
+
+
+::-webkit-scrollbar {
+    width: 0px !important;
+    height: 0px !important;
+    display: none !important;
+    background: transparent !important;
+}
+
+
+* {
+    scrollbar-width: none !important; 
+    -ms-overflow-style: none !important; 
+}
+
+
+html, body {
+    max-width: 100vw !important;
+    width: 100% !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+  
+#logo-tramas,
+#container-mapa-sul,
+#textos-tramas .titulo-tramas, 
+#textos-tramas .paragrafo-tramas, 
+#textos-tramas .titulo-equipe, 
+.card-tramatico {
+    visibility: hidden; 
+}
+
+
+
+body#pagina-central {
+    margin: 0;
+    padding: 0;
+    background-color: #0b2b8a;
+    color: #F3E28B;
+    width: 100vw;
+    
+    overflow-x: hidden; 
+    overflow-y: auto; 
+   
+}
+
+
+.sessao-tela {
+    width: 100vw;
+    height: 100vh; 
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+}
+
+
+#logo-tramas {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px; 
+    height: auto;
+    z-index: 999;
+    visibility: hidden; 
+}
+
+#logo-tramas svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+#container-mapa-sul {
+    width: 50vw;
+    height: 70vh;
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden; 
+    z-index: 1;
+}
+
+#container-mapa-sul svg {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+#textos-tramas {
+    width: 65vw; 
+    text-align: center; 
+    visibility: hidden; 
+    margin-top: 100px; 
+    
+}
+
+
+.titulo-tramas { 
+    font-family: 'coolvetica', sans-serif; 
+    font-size: 56px; 
+    margin: 0 0 20px 0; 
+}
+
+.titulo-equipe { 
+    font-family: 'coolvetica', sans-serif; 
+    font-size: 38px; 
+    margin: 30px 0 15px 0; 
+}
+
+.paragrafo-tramas { 
+    font-family: sans-serif; 
+    font-size: 18px; 
+    line-height: 1.5; 
+    margin-bottom: 15px; 
+}
+
+.lista-equipe { 
+    list-style: none; 
+    padding: 0; 
+    display: inline-block; 
+    text-align: left; 
+}
+
+.lista-equipe li { 
+    font-family: sans-serif; 
+    font-size: 18px; 
+    margin-bottom: 8px; 
+}
+
+
+#topo-degrade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 150px; 
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    
+    z-index: 990; 
+    pointer-events: none; 
+}
+
+
+#container-scroll-tramaticos {
+    width: 100vw;
+    display: flex;
+    gap: 30px;
+    
+    
+    padding-top: 20px;
+    padding-bottom: 40px;
+    padding-right: 5vw;
+    
+   
+    padding-left: 0vw; 
+    
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory; 
+    visibility: hidden; 
+    min-height: 450px;
+    align-items: flex-start; 
+    scrollbar-width: thin; 
+    scrollbar-color: #F3E28B rgba(0, 0, 0, 0.2); 
+}
+
+#container-scroll-tramaticos {
+    width: 100%; 
+    box-sizing: border-box; 
+    display: flex;
+    gap: 30px;
+    padding: 20px 5% 40px 5%;
+    
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory; 
+    visibility: hidden; 
+    min-height: 450px; 
+    align-items: flex-start; 
+  
+}
+
+
+.card-tramatico {
+    width: 325px; 
+    height: 120px; 
+    box-sizing: border-box; 
+    
+    background: #A43D45;
+    border-radius: 20px;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column; 
+    padding: 20px; 
+    cursor: pointer;
+    overflow: hidden; 
+    position: relative;
+    
+    
+    transition: height 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+
+.card-tramatico:hover {
+    height: 360px; 
+}
+
+
+.cabecalho-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 80px; 
+}
+
+.foto-circular {
+    width: 70px; 
+    height: 70px;
+    border-radius: 50%;
+    background-color: lightgray;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.nome-card {
+    color: #FFF;
+    font-family: 'Coolvetica', sans-serif;
+    font-size: 24px; 
+    font-weight: 700;
+    margin: 0;
+}
+
+.cargo-card {
+    color: #F3E28B;
+    font-family: "Snaga Uni Display", sans-serif;
+    font-size: 14px; 
+    font-weight: 600;
+    margin: 5px 0 0 0;
+}
+
+
+.corpo-card {
+    max-height: 220px; 
+    overflow-y: auto;  
+    padding-right: 8px; 
+    margin-top: 15px; 
+}
+
+.corpo-card::-webkit-scrollbar {
+    width: 4px;
+}
+
+.corpo-card::-webkit-scrollbar-track {
+    background: transparent;
+}
+.corpo-card::-webkit-scrollbar-thumb {
+    background: #cccccc; 
+    border-radius: 10px; 
+}
+
+.card-tramatico:hover .corpo-card {
+    opacity: 1; 
+    transform: translateY(0); 
+    transition-delay: 0.2s; 
+}
+
+.bio-card {
+    white-space: normal !important; 
+    word-wrap: break-word;
+    margin: 0; 
+}
+
+
+.nome-card, 
+.cargo-card {
+    text-align: left; 
+    margin-left: 0;   
+    padding-left: 0;  
+}
+
+
+.nome-card {
+    margin-bottom: 4px; 
+    margin-top: 0;
+}
+
+.cargo-card {
+    margin-top: 0;
+}
